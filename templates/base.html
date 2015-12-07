@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Greythound{% endblock %}</title>
+    <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="/" class="navbar-brand" id="brandLink1" style="padding-right:5px;">Greythound</a>
+                <a class="navbar-brand dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" rel="home" href="/" title="Greythound - Home"><span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a href='/calvin'>Calvin</a></li>
+                    <li><a href='/hobbes'>Hobbes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="container-fluid">   
+
+{% block content %}
+Content goes here.
+{% endblock %}
+
+</div>
+
+ <footer class="footer navbar navbar-fixed-bottom">
+    <div class="container">
+        <a href='/'>Home</a>
+        {% block footer %}
+        {% endblock %}
+       <p>Greythound Copyright (c) 2015</p>
+    </div>
+ </footer>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
